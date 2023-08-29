@@ -168,6 +168,8 @@ button {
 @media (min-width: 992px) {
     body {
         padding: 70px 100px;
+        background-image: url('images/bg-top.svg'), url('images/bg-bottom.svg');
+        background-position: 100% 0%, 0% 100%;
     }
 
     .flex {
