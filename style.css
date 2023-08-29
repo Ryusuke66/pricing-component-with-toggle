@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background: url('images/bg-top.svg'), hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    background-position: 195px -36px;
+    padding: 65px 25px;
+    text-align: center;
+    font-size: 15px;
+    min-height: 100vh;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, ul {
+    color: hsl(233, 13%, 49%);
+}
+
+h1 {
+    font-size: 2.1em;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 80px;
+    color: hsl(234, 14%, 74%);
+    gap: 23px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 57px;
+    height: 32px;
+}
+
+input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 20px;
+}
+
+.slider::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked ~ .slider::after {
+    transform: translateX(-24px);
+}
+
+.card {
+    background: white;
+    padding: 35px 30px 30px;
+    margin-bottom: 32px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7em;
+    margin: 20px 0 25px;
+    color: hsl(232, 13%, 33%);
+}
+
+.price span {
+    font-size: 1.7em;
+}
+
+ul li {
+    padding: 17px 0;
+}
+
+ul li:first-of-type {
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+ul li:nth-of-type(2) {
+    border-top: 1px solid hsl(234, 14%, 74%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+ul li:last-of-type {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+button {
+    margin-top: 30px;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    background: linear-gradient( to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    height: 45px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.special {
+    background :linear-gradient( 135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.special * {
+    color: white;
+}
+
+.special button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.attribution {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: white;
+    padding: 20px;
+    right: 0;
+    left: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 376px) {
+    body {
+        background-position: 135% 0%;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 70px 100px;
+    }
+
+    .flex {
+        margin-bottom: 68px;
+    }
+
+    .slider:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .price {
+        font-size: 2.2em;
+    }
+
+    .special {
+        padding: 58px 30px 55px;
+    }
+
+    .card:first-of-type {
+        border-top-right-radius: none;
+        border-bottom-right-radius: none;
+    }
+
+    .card:last-of-type {
+        border-top-left-radius: none;
+        border-bottom-left-radius: none;
+    }
+
+    button:hover {
+        background: transparent;
+        cursor: pointer;
+        border: 1px solid hsl(237, 63%, 64%);
+        color: hsl(237, 63%, 64%);
+    }
+
+    .special button:hover {
+        border: 1px solid white;
+        color: white;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    body {
+        padding: 70px 190px;
+    }
+
+    .price {
+        font-size: 2.7em;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        padding: 70px 300px;
+    }
+}
